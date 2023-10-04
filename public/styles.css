@@ -21,6 +21,8 @@
   
   body * {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    
   }
   
   .wd-flex-row-container {
@@ -31,4 +33,5 @@
   .wd-flex-grow-1 {
     flex-grow: 1;
   }
+  
   
