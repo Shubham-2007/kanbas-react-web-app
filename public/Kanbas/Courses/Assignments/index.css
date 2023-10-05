@@ -24,3 +24,7 @@
     text-decoration: none;
     color: white;
 }
+
+.list-group {
+    border-radius: 0px;
+}

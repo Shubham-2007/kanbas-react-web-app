@@ -18,21 +18,11 @@
   </head>
   <body>
     <div class="container pe-0 ps-0 ms-0">
-      <div class="d-block d-md-none wd-course-navigation-sm-size">
-        <div class="row">
-          <div class="col-2">
-            <i class="fa-solid fa-bars fs-2"></i>
-          </div>
-          <div class="col-8">Shubham Mendapara's Profile</div>
-          <div class="col-2">
-            <a href="/Kanbas/Account/AccountNavigation/index.html"
-              ><i class="fa-solid fa-chevron-down fs-2"></i
-            ></a>
-          </div>
-        </div>
-      </div>
       <div class="row">
-        <div class="col-1 wd-bg-black pe-0" style="width: 97px;background-color: black;">
+        <div
+          class="col-1 wd-bg-black pe-0 d-none d-md-block"
+          style="width: 97px; background-color: black"
+        >
           <ul class="sidebar">
             <li class="pt-0">
               <a href="/Kanbas/Account/Profile/Screen.html">
@@ -137,6 +127,21 @@
           </ul>
         </div>
         <div class="col">
+          <div class="d-block d-md-none wd-course-navigation-sm-size">
+            <div class="row">
+              <div class="col-2">
+                <a href="/Kanbas/KanbasNavigation/screen.html"
+                  ><i class="fa-solid fa-bars fs-2"></i
+                ></a>
+              </div>
+              <div class="col-8">Shubham Mendapara's Profile</div>
+              <div class="col-2">
+                <a href="/Kanbas/Account/AccountNavigation/index.html"
+                  ><i class="fa-solid fa-chevron-down fs-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
           <div class="row d-none d-md-block">
             <div class="d-flex mt-3 mb-3 ms-3">
               <div>
@@ -167,19 +172,19 @@
             </div>
             <div class="col ms-5">
               <form action="./ProfileEditor/editor.html">
-                <div class="d-flex mb-5" style="margin-top: 40px">
-                  <div class="fa-stack fa-2x" style="width: fit-content">
-                    <span class="fa-stack fa-2x">
-                      <i class="fas fa-circle fa-stack-2x"></i>
-                      <i
-                        class="fa fa-user fa-stack-1x fa-inverse"
-                        aria-hidden="true"
-                      ></i>
-                    </span>
-                  </div>
-                  <div class="ms-auto">
-                    <a
-                      class="btn btn-secondary"
+                <div class="row-flex mb-5" style="margin-top: 40px">
+                  <div>
+                    <div class="fa-stack fa-2x" style="width: fit-content">
+                      <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i
+                          class="fa fa-user fa-stack-1x fa-inverse"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </div>
+                    <button
+                      class="btn btn-secondary float-end"
                       href="/Kanbas/Account/Profile/ProfileEditor/screen.html"
                       role="button"
                     >
@@ -190,7 +195,8 @@
                         ;
                       ></i>
                       Edit Profile
-                    </a>
+                    </button>
+                    <br />
                   </div>
                 </div>
                 <div style="margin-top: 80px">
@@ -216,8 +222,8 @@
                     <a
                       href="https://youtu.be/_Hq9n7cc8rk?si=1R42N4KT3ezWhhVl"
                       class="text-decoration-none text-danger"
-                      >Youtube</a
-                    >
+                      >Youtube <i class="fa-regular fa-share-from-square"></i
+                    ></a>
                   </div>
                 </div>
               </form>

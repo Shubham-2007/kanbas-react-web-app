@@ -22,6 +22,8 @@ body {
 .wd-course-navigation a {
   text-decoration: none;
   color: red;
+  text-align: left;
+  text-wrap: wrap;
 }
 
 .wd-course-navigation li {

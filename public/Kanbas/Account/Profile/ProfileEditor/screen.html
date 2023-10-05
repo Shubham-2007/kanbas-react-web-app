@@ -135,7 +135,7 @@
               >
                 <ol class="breadcrumb mb-0">
                   <li class="me-4">
-                    <a href="../../KanabasNavigation/simpleKanabas.html">
+                    <a href="#">
                       <i class="fa-solid fa-bars" style="color: #000000"></i
                     ></a>
                   </li>
@@ -157,7 +157,11 @@
               <ul class="wd-course-navigation">
                 <li><a href="#" class="text-wrap">Notifications</a></li>
                 <li class="active">
-                  <a href="../profile.html" class="text-wrap">Profile</a>
+                  <a
+                    href="/Kanbas/Account/Profile/screen.html"
+                    class="text-wrap"
+                    >Profile</a
+                  >
                 </li>
                 <li><a href="#" class="text-wrap">Files</a></li>
                 <li><a href="#" class="text-wrap">Setting Meetings</a></li>
@@ -169,8 +173,8 @@
               </ul>
             </div>
             <div class="col">
-              <form action="../profile.html">
-                <div class="d-flex mb-1">
+              <form action="/Kanbas/Account/Profile/screen.html">
+                <div class="row-flex mb-1">
                   <div>
                     <div class="fa-stack fa-2x">
                       <span class="fa-stack fa-2x">
@@ -181,10 +185,7 @@
                         ></i>
                       </span>
                     </div>
-                    <br />
-                  </div>
-                  <div class="ms-auto">
-                    <button class="btn btn-secondary" type="submit">
+                    <button class="btn btn-secondary float-end" type="submit">
                       <i
                         class="fa fa-pencil"
                         aria-hidden="true"
@@ -197,10 +198,11 @@
                         >Cancel Editing</a
                       >
                     </button>
+                    <br />
                   </div>
                 </div>
-                <div class="mb-5" style="margin-top: 80px">
-                  <label for="name" class="form-label"> Name:* </label>
+                <div class="mb-2" style="margin-top: 80px">
+                  <label for="name" class="form-label fw-bold"> Name:* </label>
                   <input
                     type="text"
                     name="name"
@@ -209,8 +211,9 @@
                     class="form-control w-50"
                   />
                 </div>
-                <div class="mb-5">
-                  <label for="pronouns" class="form-label">Pronouns:</label
+                <div class="mb-2">
+                  <label for="pronouns" class="form-label fw-bold"
+                    >Pronouns:</label
                   ><br />
                   <select
                     id="pronouns"
@@ -220,7 +223,7 @@
                   </select>
                 </div>
                 <div class="mb-5">
-                  <label for="title" class="form-label"> Title: </label>
+                  <label for="title" class="form-label fw-bold"> Title: </label>
                   <input
                     type="text"
                     name="title"
@@ -254,8 +257,10 @@
                   <label for="links"><h3>Links</h3></label>
                   <br />
                   <div class="row">
-                    <div class="col form-label">Title</div>
-                    <div class="col form-label">URL</div>
+                    <div class="col-4 form-label text-center fw-bold">
+                      Title
+                    </div>
+                    <div class="col-5 form-label text-center fw-bold">URL</div>
                   </div>
                   <div class="row">
                     <div class="col-4">

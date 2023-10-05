@@ -2,10 +2,13 @@
     background-color: black;
     color: white;
     padding: 20px;
-    /* margin-bottom: 20px; */
 }
 
 .wd-course-navigation-sm-size a {
     text-decoration: none;
     color: white;
+}
+
+.fixed-width-table input[type="number"] {
+    width: 65px !important;
 }
