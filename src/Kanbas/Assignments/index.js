@@ -110,8 +110,8 @@ function Assignments() {
   return (
     <div style={{ marginRight: "100px" }}>
       <AssignmentSearchBar />
-      <hr class="hr-grow" />
-      <div class="row">
+      <hr className="hr-grow" />
+      <div className="row">
         {topics.map((topic, index) => (
           <AssignmentList
             key={index}
