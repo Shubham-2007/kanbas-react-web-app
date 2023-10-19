@@ -1,0 +1,57 @@
+.assignment-table .list-group-item {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+.assignment-table a {
+    text-decoration: none;
+    color: black;
+}
+
+.hr-grow {
+    width: 101%;
+    margin-left: -12px;
+}
+
+.wd-course-navigation-sm-size {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.wd-course-navigation-sm-size a {
+    text-decoration: none;
+    color: white;
+}
+
+.list-group {
+    border-radius: 0px;
+}
+
+.col-margin-left {
+    margin-left: -23px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+}
+
+.icon-black {
+    color: #050505;
+}
+
+.color-dark {
+    color: #434447;
+}
+
+.color-light {
+    color: #878885;
+}

@@ -1,0 +1,38 @@
+.form-check-input {
+    border-radius: 50%;
+  }
+  
+  .list-group-item-action a {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .status_buttons .list-group-item-action {
+    border: none;
+    padding-bottom: 0;
+  }
+  
+  .status_buttons .list-group-item-action button {
+    width: 100%;
+  }
+  
+  .view_calender a {
+    text-decoration: none;
+    color: red;
+  }
+  
+  .comming_up li {
+    border: none;
+  }
+  
+  .wd-course-navigation-sm-size {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .wd-course-navigation-sm-size a {
+    text-decoration: none;
+    color: white;
+  }
