@@ -6,6 +6,10 @@ import "../index.css";
 
 function Breadcrumb({ courseName }) {
   const { courseId } = useParams();
+  //const history = useHistory();
+
+  let arr = window.location.hash.split("/");
+
   return (
     <div className="row fs-4 mt-2 ps-0 pb-0 d-none d-md-block">
       <nav
@@ -30,7 +34,7 @@ function Breadcrumb({ courseName }) {
             <FaChevronRight style={{ color: "#000000" }} />
           </li>
           <li className="breadcrumb-item active" aria-current="page">
-            Home
+            {arr[arr.length - 1]}
           </li>
         </ol>
       </nav>

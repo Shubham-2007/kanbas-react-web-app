@@ -1,5 +1,5 @@
 import db from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useParams, Link } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import "./index.css";
 import Breadcrumb from "./Components/Breadcrumb";
@@ -8,6 +8,28 @@ import Home from "../Home";
 import Assignments from "../Assignments";
 import AssignmentEditor from "../Assignments/AssignmentEditor";
 import Grades from "../Grades";
+import { FaBars, FaChevronDown } from "react-icons/fa";
+import CourseNavigationMenu from "./CourseNavigation/CourseNavigationMenu";
+
+const CourseNavigationMin = ({ courseName }) => {
+  return (
+    <div className="d-block d-md-none wd-course-navigation-sm-size">
+      <div className="row">
+        <div className="col-2">
+          <Link to="#">
+            <FaBars size={32} />
+          </Link>
+        </div>
+        <div className="col-8">{courseName}</div>
+        <div className="col-2">
+          <Link to="#">
+            <FaChevronDown size={32} />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 function Courses() {
   const { courseId } = useParams();
@@ -15,6 +37,7 @@ function Courses() {
   return (
     <div className="row">
       <Breadcrumb courseName={course.name} />
+      <CourseNavigationMin courseName={course.name} />
       <hr style={{ marginLeft: "15px", marginTop: "20px", width: "95%" }} />
       <CourseNavigation />
       <div className="col">
