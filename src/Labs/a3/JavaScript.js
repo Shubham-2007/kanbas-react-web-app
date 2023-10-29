@@ -14,7 +14,6 @@ import IfElse from "./IfElse";
 import ImpliedReturn from "./ImpliedReturn";
 import JsonStringify from "./JsonStringify";
 import MapFunction from "./MapFunction";
-import PathParameters from "./PathParameters";
 import Spread from "./Spread";
 import TemplateLiterals from "./TemplateLiterals";
 import TernaryOperator from "./TernaryOperator";
