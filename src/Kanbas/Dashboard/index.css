@@ -1,22 +1,28 @@
 .card {
-    width: 260px;
-    min-width: 260px;
-    margin: 35px 10px;
-  }
-  
-  .card h5 {
-    font-weight: 600;
-  }
-  
-  
-  .wd-course-navigation-sm-size {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    /* margin-bottom: 20px; */
-  }
-  
-  .wd-course-navigation-sm-size a {
-    text-decoration: none;
-    color: white;
-  }
+  width: 260px;
+  min-width: 260px;
+  margin: 35px 10px;
+}
+
+.card h5 {
+  font-weight: 600;
+}
+
+
+.wd-course-navigation-sm-size {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.wd-course-navigation-sm-size a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.full-screen-div {
+  height: 100%;
+  width: 100%;
+}
