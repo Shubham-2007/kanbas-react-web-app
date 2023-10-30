@@ -4,7 +4,7 @@ import "./index.css";
 function Modules() {
   return (
     <div className="col" style={{ marginLeft: "20px" }}>
-      <Toolbar />
+      {/* <Toolbar /> */}
       <ModuleList />
     </div>
   );
