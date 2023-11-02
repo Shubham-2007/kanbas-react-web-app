@@ -9,6 +9,7 @@ import Assignments from "../Assignments";
 import AssignmentEditor from "../Assignments/AssignmentEditor";
 import Grades from "../Grades";
 import { FaBars, FaChevronDown } from "react-icons/fa";
+import AssignmentAdd from "../Assignments/AssignmentEditor/AssignmentAdd";
 
 const CourseNavigationMin = ({ courseName }) => {
   return (
@@ -33,7 +34,7 @@ const CourseNavigationMin = ({ courseName }) => {
 function Courses({ courses }) {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
-  console.log(course);
+  // console.log(course);
   return (
     <div className="row">
       <Breadcrumb courseName={course.name} />
@@ -51,9 +52,14 @@ function Courses({ courses }) {
             <Route path="Modules" element={<Modules />} />
             <Route path="Assignments" element={<Assignments />} />
             <Route
+              path="Assignments/AddAssignment"
+              element={<AssignmentAdd />}
+            />
+            <Route
               path="Assignments/:assignmentId/*"
               element={<AssignmentEditor />}
             />
+
             <Route path="Grades" element={<Grades />} />
           </Routes>
         </div>

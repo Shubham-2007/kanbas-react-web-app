@@ -5,7 +5,7 @@ import {
   updateModule,
   setModule,
 } from "./moduleReducer";
-import React, { useState } from "react";
+import React from "react";
 import {
   FaGripVertical,
   FaEllipsisV,
@@ -14,15 +14,9 @@ import {
   FaLink,
 } from "react-icons/fa";
 import { useParams } from "react-router-dom";
-import db from "../Database";
 import "./index.css";
 
-function ListItem({
-  title,
-  children,
-  module,
-  dispatch,
-}) {
+function ListItem({ title, children, module, dispatch }) {
   return (
     <li className="list-group-item">
       <FaGripVertical />
@@ -137,9 +131,7 @@ function ModuleList() {
             <ListItem
               key={module._id}
               title={module.name}
-              
               module={module}
-            
               dispatch={dispatch}
             >
               <ul className="list-group">
