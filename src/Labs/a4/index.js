@@ -19,9 +19,15 @@ const Assignment4 = () => {
   function sayHello() {
     alert("Hello");
   }
+  const handleClick = (parameter = "Hello") => {
+    console.log(parameter);
+  };
   return (
     <div>
       <h1>Assignment 4</h1>
+      <button onClick={() => handleClick("Hello")}>Hello</button>
+      <button onClick={handleClick("Hello")}>Hello</button>
+      <button onClick={handleClick}>Hello</button>
       <TodoList />
       <AddRedux />
       <CounterRedux />
