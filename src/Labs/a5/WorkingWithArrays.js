@@ -60,7 +60,7 @@ function WorkingWithArrays() {
     fetchTodos();
   }, []);
 
-  const API = "http://localhost:4000/a5/todos";
+  const API = "${process.env.REACT_APP_BASE}/a5/todos";
   return (
     <div>
       <div>
