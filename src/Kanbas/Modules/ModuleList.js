@@ -4,8 +4,9 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./moduleReducer";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaGripVertical,
   FaEllipsisV,
@@ -15,8 +16,9 @@ import {
 } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import "./index.css";
+import * as client from "./client";
 
-function ListItem({ title, children, module, dispatch }) {
+function ListItem({ title, children, module, dispatch, handleDeleteModule }) {
   return (
     <li className="list-group-item">
       <FaGripVertical />
@@ -29,7 +31,7 @@ function ListItem({ title, children, module, dispatch }) {
         Edit
       </button>
       <button
-        onClick={() => dispatch(deleteModule(module._id))}
+        onClick={() => handleDeleteModule(module._id)}
         className="btn btn-danger m-4 float-end"
         style={{ fontSize: "12px" }}
       >
@@ -66,6 +68,27 @@ function SubListItem({ content, isLink = false }) {
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -103,7 +126,7 @@ function ModuleList() {
         </form>
 
         <button
-          onClick={() => dispatch(updateModule(module))}
+          onClick={() => handleUpdateModule(module)}
           className="btn btn-primary m-3"
           type="button"
           style={{ fontSize: "12px" }}
@@ -111,7 +134,7 @@ function ModuleList() {
           Update
         </button>
         <button
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          onClick={handleAddModule}
           className="btn btn-success m-3"
           type="button"
           style={{ fontSize: "12px" }}
@@ -133,6 +156,8 @@ function ModuleList() {
               title={module.name}
               module={module}
               dispatch={dispatch}
+              handleDeleteModule={handleDeleteModule}
+              handleUpdateModule={handleUpdateModule}
             >
               <ul className="list-group">
                 {Object.keys(module)
