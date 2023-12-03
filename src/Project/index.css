@@ -1,0 +1,22 @@
+.nav-link {
+  border: 1px solid black; /* Black border of 1px */
+  color: black;            /* Black font color */
+  padding: 5px;            /* Add some padding for better appearance */
+  text-decoration: none;   /* Optional: Removes underline from links */
+}
+
+.nav-link.active {
+  background-color: blue; /* Blue background */
+  color: white;           /* White font color */
+}
+.nav-link {
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background-color: blue;
+  color: white;
+}
